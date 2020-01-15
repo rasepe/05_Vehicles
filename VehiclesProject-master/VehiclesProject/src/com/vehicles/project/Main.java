@@ -157,7 +157,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		sc.close();
+		//sc.close();
 
 		System.out.println("COTXE CREAT CORRECTAMENT");
 
@@ -277,7 +277,7 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		sc.close();
+		//sc.close();
 
 		System.out.println("MOTO CREADA CORRECTAMENT");
 
