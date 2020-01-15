@@ -11,12 +11,12 @@ public class Wheel {
 		this.diameter = diameter;
 	}
 
-	
+
 	public boolean equals(Object o) {
 
-        Wheel wheel = (Wheel) o;
-        return this.brand.equals(wheel.brand) &&
-        		this.diameter == wheel.diameter;
-                
-    }
+		Wheel wheel = (Wheel) o;
+		return this.brand.equals(wheel.brand) &&
+				this.diameter == wheel.diameter;
+
+	}
 }
