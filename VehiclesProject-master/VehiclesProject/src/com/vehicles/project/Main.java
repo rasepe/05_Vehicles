@@ -36,7 +36,6 @@ public class Main {
 				}
 				for (int j = 0; j < 4 ; j++) {
 					if (Character.getNumericValue(characters[j]) < 0 || Character.getNumericValue(characters[j]) > 9) {
-						//correcte = false;
 						throw new Exception();
 					} 
 				}
@@ -44,12 +43,11 @@ public class Main {
 				//2 o 3 ultims caracters han de ser lletres (= no han de ser numeros)
 				for (int k = 4; k < characters.length ; k++) {
 					if (Character.getNumericValue(characters[k]) > -1 && Character.getNumericValue(characters[k]) < 10) {
-						//correcte = false;
 						throw new Exception();
 					} else {
 						correcte = true;
 					}
-				}
+				}		
 			} catch (Exception e) {
 				System.out.println(VehiclesException.WRONG_PLATE);
 			}  
@@ -71,7 +69,6 @@ public class Main {
 		Wheel leftFrontWheel;
 		Wheel rightFrontWheel;
 
-
 		System.out.println("Marca rodes traseres?");
 		brandBackWheels = sc.next();
 
@@ -89,13 +86,10 @@ public class Main {
 			}catch (Exception e) {
 				System.out.println(VehiclesException.WRONG_DIAMETER);
 			}  
-
 		} while (correcte == false);
-
 
 		rightBackWheel = new Wheel(brandBackWheels, diameterBackWheels);
 		leftBackWheel = new Wheel(brandBackWheels, diameterBackWheels); 
-
 
 		System.out.println("Marca rodes davanteres?");
 		brandFrontWheels = sc.next();
@@ -114,18 +108,14 @@ public class Main {
 			}catch (Exception e) {
 				System.out.println(VehiclesException.WRONG_DIAMETER);
 			}  
-
 		} while (correcte == false);
-
 
 		rightFrontWheel = new Wheel(brandFrontWheels, diameterFrontWheels);
 		leftFrontWheel = new Wheel(brandFrontWheels, diameterFrontWheels); //= rightFrontWheel;
 
-
 		List<Wheel> frontWheels = new ArrayList<Wheel>(); 
 		frontWheels.add(rightFrontWheel);
 		frontWheels.add(leftFrontWheel);
-
 
 		List<Wheel> backWheels = new ArrayList<Wheel>(); 
 		backWheels.add(rightBackWheel);
@@ -140,6 +130,6 @@ public class Main {
 
 		System.out.println("FI");
 		sc.close();
-	}
 
+	}
 }
